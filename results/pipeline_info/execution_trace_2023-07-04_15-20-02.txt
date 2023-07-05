@@ -1,0 +1,3 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	51/48e999	120657	NFCORE_SCRNASEQ:SCRNASEQ:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet-2-0.csv)	FAILED	127	2023-07-04 15:20:22.666	4.4s	4.4s	-	-	-	-	-
+2	b8/e93bc5	120689	NFCORE_SCRNASEQ:SCRNASEQ:GTF_GENE_FILTER (GRCm38.p6.genome.chr19.fa)	FAILED	127	2023-07-04 15:20:23.103	8.6s	8.5s	-	-	-	-	-

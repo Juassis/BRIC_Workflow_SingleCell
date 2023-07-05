@@ -1,0 +1,9 @@
+Module	Section	Sample Name	Source
+STAR	SummaryLog	Sample_X	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/9/Sample_X.Log.final.out
+STAR	SummaryLog	Sample_Y	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/10/Sample_Y.Log.final.out
+FastQC	all_sections	Sample_X_1	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/3/Sample_X_1_fastqc.zip
+FastQC	all_sections	Sample_X_2	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/4/Sample_X_2_fastqc.zip
+FastQC	all_sections	Sample_Y_1	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/5/Sample_Y_1_fastqc.zip
+FastQC	all_sections	Sample_Y_2	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/6/Sample_Y_2_fastqc.zip
+FastQC	all_sections	Sample_Y_3	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/7/Sample_Y_3_fastqc.zip
+FastQC	all_sections	Sample_Y_4	/localdata/nf_core/SingleCell/work/56/3636486e61c82b085a1db9d50343e3/8/Sample_Y_4_fastqc.zip

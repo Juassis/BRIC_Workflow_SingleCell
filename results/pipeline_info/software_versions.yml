@@ -1,0 +1,16 @@
+CUSTOM_DUMPSOFTWAREVERSIONS:
+  python: 3.11.0
+  yaml: '6.0'
+FASTQC:
+  fastqc: 0.11.9
+SAMPLESHEET_CHECK:
+  python: 3.8.3
+STAR_ALIGN:
+  star: 2.7.10b
+STAR_GENOMEGENERATE:
+  gawk: 5.1.0
+  samtools: 1.16.1
+  star: 2.7.9a
+Workflow:
+  Nextflow: 23.04.2
+  nf-core/scrnaseq: 2.3.1

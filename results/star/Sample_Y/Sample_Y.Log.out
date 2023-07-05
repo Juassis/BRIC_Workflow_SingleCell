@@ -1,0 +1,274 @@
+STAR version=2.7.10b
+STAR compilation time,server,dir=2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+STAR git: On branch master ; commit c6f8efc2c7043ef83bf8b0d9bed36bbb6b9b1133 ; diff files: CHANGES.md 
+##### Command Line:
+STAR --genomeDir star --readFilesIn Sample_Y_S1_L001_R2_001.fastq.gz,Sample_Y_S1_L002_R2_001.fastq.gz Sample_Y_S1_L001_R1_001.fastq.gz,Sample_Y_S1_L002_R1_001.fastq.gz --runThreadN 2 --outFileNamePrefix Sample_Y. --soloCBwhitelist /dev/fd/63 --soloType CB_UMI_Simple --soloFeatures Gene --soloUMIlen 10 --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf --outSAMattrRGline ID:Sample_Y CN:CRG_Barcelona SM:Sample_Y --soloCellFilter CellRanger2.2 5000 0.99 10 --readFilesCommand zcat --runDirPerm All_RWX --outWigType bedGraph --twopassMode Basic --outSAMtype BAM SortedByCoordinate
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 Sample_Y.
+###### All USER parameters from Command Line:
+genomeDir                     star     ~RE-DEFINED
+readFilesIn                   Sample_Y_S1_L001_R2_001.fastq.gz,Sample_Y_S1_L002_R2_001.fastq.gz   Sample_Y_S1_L001_R1_001.fastq.gz,Sample_Y_S1_L002_R1_001.fastq.gz        ~RE-DEFINED
+runThreadN                    2     ~RE-DEFINED
+outFileNamePrefix             Sample_Y.     ~RE-DEFINED
+soloCBwhitelist               /dev/fd/63        ~RE-DEFINED
+soloType                      CB_UMI_Simple     ~RE-DEFINED
+soloFeatures                  Gene        ~RE-DEFINED
+soloUMIlen                    10     ~RE-DEFINED
+sjdbGTFfile                   GRCm38.p6.genome.chr19_genes.gtf     ~RE-DEFINED
+outSAMattrRGline              ID:Sample_Y   CN:CRG_Barcelona   SM:Sample_Y        ~RE-DEFINED
+soloCellFilter                CellRanger2.2   5000   0.99   10        ~RE-DEFINED
+readFilesCommand              zcat        ~RE-DEFINED
+runDirPerm                    All_RWX     ~RE-DEFINED
+outWigType                    bedGraph        ~RE-DEFINED
+twopassMode                   Basic     ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        2
+runDirPerm                        All_RWX
+genomeDir                         star
+readFilesIn                       Sample_Y_S1_L001_R2_001.fastq.gz,Sample_Y_S1_L002_R2_001.fastq.gz   Sample_Y_S1_L001_R1_001.fastq.gz,Sample_Y_S1_L002_R1_001.fastq.gz   
+readFilesCommand                  zcat   
+outFileNamePrefix                 Sample_Y.
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMattrRGline                  ID:Sample_Y   CN:CRG_Barcelona   SM:Sample_Y   
+outWigType                        bedGraph   
+sjdbGTFfile                       GRCm38.p6.genome.chr19_genes.gtf
+twopassMode                       Basic
+soloType                          CB_UMI_Simple
+soloUMIlen                        10
+soloCBwhitelist                   /dev/fd/63   
+soloFeatures                      Gene   
+soloCellFilter                    CellRanger2.2   5000   0.99   10   
+
+-------------------------------
+##### Final effective command line:
+STAR   --runThreadN 2   --runDirPerm All_RWX   --genomeDir star   --readFilesIn Sample_Y_S1_L001_R2_001.fastq.gz,Sample_Y_S1_L002_R2_001.fastq.gz   Sample_Y_S1_L001_R1_001.fastq.gz,Sample_Y_S1_L002_R1_001.fastq.gz      --readFilesCommand zcat      --outFileNamePrefix Sample_Y.   --outSAMtype BAM   SortedByCoordinate      --outSAMattrRGline ID:Sample_Y   CN:CRG_Barcelona   SM:Sample_Y      --outWigType bedGraph      --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf   --twopassMode Basic   --soloType CB_UMI_Simple   --soloUMIlen 10   --soloCBwhitelist /dev/fd/63      --soloFeatures Gene      --soloCellFilter CellRanger2.2   5000   0.99   10   
+----------------------------------------
+
+Number of fastq files for each mate = 2
+
+   Input read files for mate 1 :
+-rw-r--r--    1 flb202   cbmr_xgg   4259756 Jul  5 13:27 Sample_Y_S1_L001_R2_001.fastq.gz
+-rw-r--r--    1 flb202   cbmr_xgg   1981608 Jul  5 13:27 Sample_Y_S1_L002_R2_001.fastq.gz
+
+   readsCommandsFile:
+exec > "Sample_Y._STARtmp/tmp.fifo.read1"
+echo FILE 0
+zcat      "Sample_Y_S1_L001_R2_001.fastq.gz"
+echo FILE 1
+zcat      "Sample_Y_S1_L002_R2_001.fastq.gz"
+
+
+   Input read files for mate 2 :
+-rw-r--r--    1 flb202   cbmr_xgg   1727503 Jul  5 13:27 Sample_Y_S1_L001_R1_001.fastq.gz
+-rw-r--r--    1 flb202   cbmr_xgg    737653 Jul  5 13:27 Sample_Y_S1_L002_R1_001.fastq.gz
+
+   readsCommandsFile:
+exec > "Sample_Y._STARtmp/tmp.fifo.read2"
+echo FILE 0
+zcat      "Sample_Y_S1_L001_R1_001.fastq.gz"
+echo FILE 1
+zcat      "Sample_Y_S1_L002_R1_001.fastq.gz"
+
+WARNING --outSAMattrRG defines a read group, therefore STAR will output RG attribute
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  5000 0.99 10
+Number of CBs in the whitelist = 737280
+Jul 05 13:28:29 ... Finished reading, sorting and deduplicating CB whitelist sequences.
+WARNING: --limitBAMsortRAM=0, will use genome size as RAM limit for BAM sorting
+Finished loading and checking parameters
+Reading genome generation parameters:
+### STAR   --runMode genomeGenerate      --runThreadN 2   --genomeDir star/   --genomeFastaFiles GRCm38.p6.genome.chr19.fa      --genomeSAindexNbases 12   --limitGenomeGenerateRAM 6342450944   --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              GRCm38.p6.genome.chr19.fa        ~RE-DEFINED
+genomeSAindexNbases           12     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  100     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   GRCm38.p6.genome.chr19_genes.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               63222895   493489065        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 1
+1	chr19	61431566	0
+--sjdbOverhang = 100 taken from the generated genome
+Started loading the genome: Wed Jul  5 13:28:29 2023
+
+Genome: size given as a parameter = 63222895
+SA: size given as a parameter = 493489065
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=12  nSAi=22369620
+nGenome=63222895;  nSAbyte=493489065
+GstrandBit=32   SA number of indices=119633712
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 63222895 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 63222895 bytes
+SA file size: 493489065 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 493489065 bytes
+Loading SAindex ... done: 97867203 bytes
+Finished loading the genome: Wed Jul  5 13:28:29 2023
+
+Processing splice junctions database sjdbN=8055,   pGe.sjdbOverhang=100 
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Jul 05 13:28:29   Loaded database junctions from the generated genome star//sjdbList.out.tab: 8055 total junctions
+
+Jul 05 13:28:29 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=GRCm38.p6.genome.chr19_genes.gtf, found:
+		2985 transcripts
+		20581 exons (non-collapsed)
+		8060 collapsed junctions
+Total junctions: 16115
+Jul 05 13:28:29 ..... finished GTF processing
+
+Jul 05 13:28:29   Finished preparing junctions
+Jul 05 13:28:29 ..... inserting junctions into the genome indices
+Jul 05 13:28:29   Finished SA search: number of new junctions=0, old junctions=8055
+Jul 05 13:28:29   Finished sorting SA indicesL nInd=0
+Genome size with junctions=63222895  61603840   1619055
+GstrandBit1=32   GstrandBit=32
+Jul 05 13:28:31   Finished inserting junction indices
+Jul 05 13:28:31   Finished SAi
+Jul 05 13:28:31 ..... finished inserting junctions into genome
+Created thread # 1
+Starting to map file # 0
+mate 1:   Sample_Y_S1_L001_R2_001.fastq.gz
+mate 2:   Sample_Y_S1_L001_R1_001.fastq.gz
+Starting to map file # 1
+mate 1:   Sample_Y_S1_L002_R2_001.fastq.gz
+mate 2:   Sample_Y_S1_L002_R1_001.fastq.gz
+Thread #1 end of input stream, nextChar=-1
+Completed: thread #0
+Completed: thread #1
+Joined thread # 1
+Jul 05 13:29:55   Loaded database junctions from the 1st pass file: Sample_Y._STARpass1//SJ.out.tab: 16432 total junctions
+
+Jul 05 13:29:55   Finished preparing junctions
+Jul 05 13:29:55 ..... inserting junctions into the genome indices
+Jul 05 13:29:55   Finished SA search: number of new junctions=212, old junctions=8055
+Jul 05 13:29:55   Finished sorting SA indicesL nInd=84800
+Genome size with junctions=63265507  61603840   1661667
+GstrandBit1=32   GstrandBit=32
+Jul 05 13:29:57   Finished inserting junction indices
+Jul 05 13:29:57   Finished SAi
+Jul 05 13:29:57 ..... finished inserting junctions into genome
+
+   Input read files for mate 1 :
+-rw-r--r--    1 flb202   cbmr_xgg   4259756 Jul  5 13:27 Sample_Y_S1_L001_R2_001.fastq.gz
+-rw-r--r--    1 flb202   cbmr_xgg   1981608 Jul  5 13:27 Sample_Y_S1_L002_R2_001.fastq.gz
+
+   readsCommandsFile:
+exec > "Sample_Y._STARtmp/tmp.fifo.read1"
+echo FILE 0
+zcat      "Sample_Y_S1_L001_R2_001.fastq.gz"
+echo FILE 1
+zcat      "Sample_Y_S1_L002_R2_001.fastq.gz"
+
+
+   Input read files for mate 2 :
+-rw-r--r--    1 flb202   cbmr_xgg   1727503 Jul  5 13:27 Sample_Y_S1_L001_R1_001.fastq.gz
+-rw-r--r--    1 flb202   cbmr_xgg    737653 Jul  5 13:27 Sample_Y_S1_L002_R1_001.fastq.gz
+
+   readsCommandsFile:
+exec > "Sample_Y._STARtmp/tmp.fifo.read2"
+echo FILE 0
+zcat      "Sample_Y_S1_L001_R1_001.fastq.gz"
+echo FILE 1
+zcat      "Sample_Y_S1_L002_R1_001.fastq.gz"
+
+Loaded transcript database, nTr=2985
+Loaded exon database, nEx=20581
+Created thread # 1
+Starting to map file # 0
+mate 1:   Sample_Y_S1_L001_R2_001.fastq.gz
+mate 2:   Sample_Y_S1_L001_R1_001.fastq.gz
+Starting to map file # 1
+mate 1:   Sample_Y_S1_L002_R2_001.fastq.gz
+mate 2:   Sample_Y_S1_L002_R1_001.fastq.gz
+Thread #0 end of input stream, nextChar=-1
+BAM sorting: 12838 mapped reads
+BAM sorting bins genomic start loci:
+1	0	3852578
+2	0	5258973
+3	0	5800484
+4	0	5802015
+5	0	5802130
+6	0	5802542
+7	0	5802611
+8	0	5802612
+9	0	6044586
+10	0	6376918
+11	0	7465242
+12	0	8792790
+13	0	9083720
+14	0	9083805
+15	0	9216670
+16	0	9984951
+17	0	11198473
+18	0	11777734
+19	0	12847034
+20	0	15193612
+21	0	15193781
+22	0	16225299
+23	0	16716124
+24	0	19854837
+25	0	23620000
+26	0	24896172
+27	0	28470894
+28	0	28862055
+29	0	29003536
+30	0	30243905
+31	0	32466012
+32	0	34192836
+33	0	37135711
+34	0	37295354
+35	0	38342435
+36	0	41018335
+37	0	41965323
+38	0	44707537
+39	0	45396951
+40	0	45877730
+41	0	46738360
+42	0	49709724
+43	0	50030334
+44	0	53767741
+45	0	54891940
+46	0	57082034
+47	0	59322411
+48	0	60812880
+Completed: thread #1
+Completed: thread #0
+Joined thread # 1
+Jul 05 13:31:25 ..... finished mapping
+RAM after mapping:
+VmPeak:	 5053648 kB; VmSize:	 5005796 kB; VmHWM:	 2189344 kB; VmRSS:	 2185444 kB; 
+RAM after freeing genome index memory:
+VmPeak:	 5053648 kB; VmSize:	  735204 kB; VmHWM:	 2189344 kB; VmRSS:	  577460 kB; 
+Jul 05 13:31:26 ..... started Solo counting
+Jul 05 13:31:26 ... Starting Solo post-map for Gene
+Jul 05 13:31:26 ... Finished allocating arrays for Solo 6.51926e-05 GiB
+Jul 05 13:31:26 ... Finished reading reads from Solo files nCB=4739, nReadPerCBmax=26, yesWLmatch=0
+RAM for solo feature Gene
+VmPeak:	 5053648 kB; VmSize:	  752560 kB; VmHWM:	 2189344 kB; VmRSS:	  594580 kB; 
+Jul 05 13:31:26 ... Finished collapsing UMIs
+Jul 05 13:31:26 ... Solo: writing raw matrix
+Solo output directory directory created: Sample_Y.Solo.out/Gene//raw/
+Jul 05 13:31:26 ... Solo: cell filtering
+cellFiltering: simple: nUMImax=8; nUMImin=1; nCellsSimple=4675
+Solo output directory directory created: Sample_Y.Solo.out/Gene/filtered/
+RAM after completing solo:
+VmPeak:	 5053648 kB; VmSize:	  752560 kB; VmHWM:	 2189344 kB; VmRSS:	  594780 kB; 
+Jul 05 13:31:26 ..... finished Solo counting
+Jul 05 13:31:26 ..... started sorting BAM
+Max memory needed for sorting = 164034
+Jul 05 13:31:26 ..... started wiggle output
+ALL DONE!

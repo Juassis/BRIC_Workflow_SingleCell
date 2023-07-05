@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	f0/9a3b29	210200	NFCORE_SCRNASEQ:SCRNASEQ:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet-2-0.csv)	FAILED	1	2023-07-05 12:32:50.605	4.5s	4.5s	-	-	-	-	-

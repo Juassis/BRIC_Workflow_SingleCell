@@ -1,0 +1,7 @@
+Sample	Unique Reads	Duplicate Reads
+Sample_X_1	95631.0	4369.0
+Sample_X_2	78664.0	21336.0
+Sample_Y_1	95631.0	4369.0
+Sample_Y_2	78664.0	21336.0
+Sample_Y_3	23914.0	1086.0
+Sample_Y_4	23510.0	1490.0
